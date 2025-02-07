@@ -2,9 +2,11 @@ let display = document.getElementById("display");
 
 function displayF() {
     if (document.getElementById("input1").value == "" && document.getElementById("input2").value == "") {
+        display.value = "";
         display.value = "Error";
         display.classList.add("addColor");
     } else {
+        display.value = "";
         let input1 = document.getElementById("input1")
         let input2 = document.getElementById("input2")
     
