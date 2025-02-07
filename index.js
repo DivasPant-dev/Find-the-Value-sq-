@@ -1,13 +1,22 @@
-function display() {
-    let input1 = document.getElementById("input1")
-    let input2 = document.getElementById("input2")
+let display = document.getElementById("display");
 
-    let number = input1.value;
-    let power = input2.value;
-
-    let result = Math.pow(number, power);
-
-    document.getElementById("result").innerHTML = result;
+function displayF() {
+    if (document.getElementById("input1").value == "" && document.getElementById("input2").value == "") {
+        display.value = "Error";
+        display.classList.add("addColor");
+    } else {
+        let input1 = document.getElementById("input1")
+        let input2 = document.getElementById("input2")
+    
+        let number = input1.value;
+        let power = input2.value;
+    
+        let result = Math.pow(number, power);
+    
+        let display = document.getElementById("display")
+    
+        display.value += result;
+    }
 }
 
 document.getElementById("clear").addEventListener("click", function() {
