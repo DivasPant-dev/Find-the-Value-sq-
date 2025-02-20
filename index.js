@@ -1,21 +1,20 @@
 let display = document.getElementById("display");
+let input1 = document.getElementById("input1");
+let input2 = document.getElementById("input2");
 
 function displayF() {
-    if (document.getElementById("input1").value == "" && document.getElementById("input2").value == "") {
+    if (input1.value == "" && input2.value == "") {
         display.value = "Error";
-        display.classList.add("addColor");
     } else {
-        let input1 = document.getElementById("input1")
-        let input2 = document.getElementById("input2")
-    
-        let number = input1.value;
-        let power = input2.value;
+        let number = parseFloat(input1.value);
+        let power = parseFloat(input2.value);
     
         let result = Math.pow(number, power);
     
-        let display = document.getElementById("display")
-    
-        display.value += result;
+        display.value = result;
+
+        input1.value = "";
+        input2.value = "";
     }
 }
 
